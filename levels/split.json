@@ -1,0 +1,120 @@
+{
+  "collisionscale" : 7,
+  "collisionmap" : "split_collide",
+  "tilesize" : 420,
+  "mobdef" : {
+    "Alice" : {
+      "control" : "wasd",
+      "size" : 30,
+      "img" : "smiley"
+    },
+    "Bob" : {
+      "control" : "arrow",
+      "size" : 30,
+      "img" : "smiley"
+    },
+    "bug" : {
+      "hungry" : false,
+      "img" : "bug",
+      "size" : 20,
+      "control" : {
+        "default" : "random",
+        "behave" : [
+          {"dist" : 300, "action" : "flee", "entity" : "player big"}
+        ]
+      }
+    },
+    "magnet" : {
+      "hungry" : false,
+      "img" : "magnet",
+      "size" : 100,
+      "control" : {
+        "default" : "stand",
+        "behave" : []
+      }
+    },
+    "nail" : {
+      "hungry" : false,
+      "img" : "nail",
+      "size" : 20,
+      "control" : {
+        "default" : "stand",
+        "behave" : [
+          {"dist" : 150, "action" : "stand", "entity" : "magnet"},
+          {"dist" : 400, "action" : "chase", "entity" : "magnet"}
+        ]
+      }
+    }
+  },
+  "mobs" : [
+    {"kind" : "Alice", "x" : 500, "y" : 500},
+    {"kind" : "Bob", "x" : 1100, "y" : 2700},
+    {"kind" : "bug", "x" : 200, "y" : 600},
+    {"kind" : "bug", "x" : 300, "y" : 610},
+    {"kind" : "bug", "x" : 400, "y" : 620},
+    {"kind" : "bug", "x" : 500, "y" : 630},
+    {"kind" : "bug", "x" : 600, "y" : 640},
+    {"kind" : "bug", "x" : 700, "y" : 650},
+    {"kind" : "bug", "x" : 220, "y" : 680},
+    {"kind" : "bug", "x" : 320, "y" : 690},
+    {"kind" : "bug", "x" : 420, "y" : 700},
+    {"kind" : "bug", "x" : 520, "y" : 710},
+    {"kind" : "bug", "x" : 620, "y" : 720},
+    {"kind" : "bug", "x" : 720, "y" : 730},
+    {"kind" : "bug", "x" : 200, "y" : 2000},
+    {"kind" : "bug", "x" : 300, "y" : 2010},
+    {"kind" : "bug", "x" : 400, "y" : 2020},
+    {"kind" : "bug", "x" : 500, "y" : 2030},
+    {"kind" : "bug", "x" : 600, "y" : 2040},
+    {"kind" : "bug", "x" : 700, "y" : 2050},
+    {"kind" : "bug", "x" : 220, "y" : 2080},
+    {"kind" : "bug", "x" : 320, "y" : 2090},
+    {"kind" : "bug", "x" : 420, "y" : 2100},
+    {"kind" : "bug", "x" : 520, "y" : 2110},
+    {"kind" : "bug", "x" : 620, "y" : 2120},
+    {"kind" : "bug", "x" : 720, "y" : 2130},
+    {"kind" : "magnet", "x" : 1720, "y" : 1530},
+    {"kind" : "nail", "x" : 720, "y" : 1610},
+    {"kind" : "nail", "x" : 740, "y" : 1530},
+    {"kind" : "nail", "x" : 650, "y" : 1570},
+    {"kind" : "nail", "x" : 620, "y" : 1580},
+    {"kind" : "nail", "x" : 650, "y" : 1550}
+  ],
+  "tiles" : [
+    {"x":0,"y":0,"name":"split_nw"},
+    {"x":1,"y":0,"name":"split_n"},
+    {"x":2,"y":0,"name":"split_n"},
+    {"x":3,"y":0,"name":"split_n"},
+    {"x":4,"y":0,"name":"split_ne"},
+    {"x":0,"y":1,"name":"split_w"},
+    {"x":1,"y":1,"name":"split_free"},
+    {"x":2,"y":1,"name":"split_free"},
+    {"x":3,"y":1,"name":"split_free2"},
+    {"x":4,"y":1,"name":"split_e1"},
+    {"x":0,"y":2,"name":"split_w"},
+    {"x":1,"y":2,"name":"split_free2"},
+    {"x":2,"y":2,"name":"split_free"},
+    {"x":3,"y":2,"name":"split_free"},
+    {"x":4,"y":2,"name":"split_e2"},
+    {"x":0,"y":3,"name":"split_w"},
+    {"x":1,"y":3,"name":"split_free"},
+    {"x":2,"y":3,"name":"split_bnw"},
+    {"x":3,"y":3,"name":"split_bne"},
+    {"x":4,"y":3,"name":"split_e1"},
+    {"x":0,"y":4,"name":"split_w"},
+    {"x":1,"y":4,"name":"split_free"},
+    {"x":2,"y":4,"name":"split_e1"},
+    {"x":3,"y":4,"name":"split_w"},
+    {"x":4,"y":4,"name":"split_e2"},
+    {"x":0,"y":5,"name":"split_w"},
+    {"x":1,"y":5,"name":"split_free2"},
+    {"x":2,"y":5,"name":"split_bsw"},
+    {"x":3,"y":5,"name":"split_bse"},
+    {"x":4,"y":5,"name":"split_e1"},
+    {"x":0,"y":6,"name":"split_sw"},
+    {"x":1,"y":6,"name":"split_s"},
+    {"x":2,"y":6,"name":"split_s"},
+    {"x":3,"y":6,"name":"split_s"},
+    {"x":4,"y":6,"name":"split_se"}
+  ]
+}

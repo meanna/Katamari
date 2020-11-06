@@ -1,0 +1,78 @@
+{
+  "collisionscale" : 2,
+  "collisionmap" : "collision_map",
+  "tilesize" : 700,
+  "mobdef" : {
+    "Alice" : {
+      "control" : "wasd",
+      "size" : 30,
+      "img" : "girl"
+    },
+    "Bob" : {
+      "control" : "arrow",
+      "size" : 30,
+      "img" : "boy"
+    },
+    "bug" : {
+      "hungry" : false,
+      "img" : "red_bug",
+      "size" : 20,
+      "control" : {
+        "default" : "random",
+        "behave" : [
+          {"dist" : 300, "action" : "flee", "entity" : "player big"}
+        ]
+      }
+    },
+    "big bug" : {
+      "img" : "red_bug",
+      "hungry" : true,
+      "size" : 40,
+      "control" : {
+        "default" : "random",
+        "behave" : [
+          {"dist" : 300, "action" : "flee", "entity" : "player big"},
+          {"dist" : 100, "action" : "chase", "entity" : "bug"}
+        ]
+      }
+    },
+    "mushroom" : {
+      "hungry" : false,
+      "img" : "mushroom",
+      "size" : 20,
+      "control" : {
+        "default" : "stand",
+        "behave" : []
+      }
+    }
+
+  },
+  "mobs" : [
+    {"kind" : "Alice", "x" : 100, "y" : 100},
+    {"kind" : "Bob", "x" : 100, "y" : 1100},
+    {"kind" : "bug", "x" : 1200, "y" : 700},
+    {"kind" : "bug", "x" : 1200, "y" : 400},
+    {"kind" : "bug", "x" : 900, "y" : 700},
+    {"kind" : "bug", "x" : 100, "y" : 1200},
+    {"kind" : "mushroom", "x" : 300, "y" : 830},
+    {"kind" : "mushroom", "x" : 900, "y" : 840},
+    {"kind" : "mushroom", "x" : 1000, "y" : 850},
+    {"kind" : "mushroom", "x" : 120, "y" : 180},
+    {"kind" : "mushroom", "x" : 120, "y" : 900},
+    {"kind" : "mushroom", "x" : 920, "y" : 100},
+    {"kind" : "mushroom", "x" : 1200, "y" : 750},
+    {"kind" : "mushroom", "x" : 520, "y" : 120},
+    {"kind" : "mushroom", "x" : 620, "y" : 230},
+    {"kind" : "mushroom", "x" : 200, "y" : 1200},
+    {"kind" : "mushroom", "x" : 1200, "y" : 1250},
+    {"kind" : "mushroom", "x" : 500, "y" : 1200},
+    {"kind" : "mushroom", "x" : 620, "y" : 1230},
+    {"kind" : "big bug", "x" : 1200, "y" : 800}
+  ],
+  "tiles" : [
+    {"x":0,"y":0,"name":"top_left"},
+    {"x":1,"y":0,"name":"top_right"},
+    {"x":0,"y":1,"name":"bottom_left"},
+    {"x":1,"y":1,"name":"bottom_right"}
+  ]
+}

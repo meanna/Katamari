@@ -1,0 +1,80 @@
+{
+  "collisionscale" : 8,
+  "collisionmap" : "collisionbox",
+  "tilesize" : 256,
+  "mobdef" : {
+    "Alice" : {
+      "control" : "wasd",
+      "size" : 30,
+      "img" : "smiley"
+    },
+    "Bob" : {
+      "control" : "arrow",
+      "size" : 30,
+      "img" : "smiley"
+    },
+    "bug" : {
+      "hungry" : false,
+      "img" : "bug",
+      "size" : 20,
+      "control" : {
+        "default" : "random",
+        "behave" : [
+          {"dist" : 300, "action" : "flee", "entity" : "player big"}
+        ]
+      }
+    },
+    "big bug" : {
+      "img" : "bug",
+      "hungry" : true,
+      "size" : 40,
+      "control" : {
+        "default" : "random",
+        "behave" : [
+          {"dist" : 300, "action" : "flee", "entity" : "player big"},
+          {"dist" : 100, "action" : "chase", "entity" : "bug"}
+        ]
+      }
+    }
+  },
+  "mobs" : [
+    {"kind" : "Alice", "x" : 100, "y" : 100},
+    {"kind" : "Bob", "x" : 300, "y" : 200},
+    {"kind" : "bug", "x" : 100, "y" : 600},
+    {"kind" : "bug", "x" : 200, "y" : 610},
+    {"kind" : "bug", "x" : 300, "y" : 620},
+    {"kind" : "bug", "x" : 400, "y" : 630},
+    {"kind" : "bug", "x" : 500, "y" : 640},
+    {"kind" : "bug", "x" : 600, "y" : 650},
+    {"kind" : "bug", "x" : 120, "y" : 680},
+    {"kind" : "bug", "x" : 220, "y" : 690},
+    {"kind" : "bug", "x" : 320, "y" : 700},
+    {"kind" : "bug", "x" : 420, "y" : 710},
+    {"kind" : "bug", "x" : 520, "y" : 720},
+    {"kind" : "bug", "x" : 620, "y" : 730},
+    {"kind" : "big bug", "x" : 1000, "y" : 600}
+  ],
+  "tiles" : [
+    {"x":0,"y":0,"name":"box00"},
+    {"x":7,"y":0,"name":"box10"},
+    {"x":7,"y":3,"name":"box11"},
+    {"x":0,"y":3,"name":"box01"},
+    {"x":1,"y":0,"name":"box_top"},
+    {"x":2,"y":0,"name":"box_top"},
+    {"x":3,"y":0,"name":"box_peak"},
+    {"x":3,"y":1,"name":"box_wallpiece"},
+    {"x":4,"y":0,"name":"box_top"},
+    {"x":5,"y":0,"name":"box_top"},
+    {"x":6,"y":0,"name":"box_top"},
+    {"x":1,"y":3,"name":"box_bottom"},
+    {"x":2,"y":3,"name":"box_bottom"},
+    {"x":3,"y":3,"name":"box_bottom"},
+    {"x":4,"y":3,"name":"box_bottom"},
+    {"x":5,"y":3,"name":"box_bottom"},
+    {"x":6,"y":3,"name":"box_bottom"},
+    {"x":0,"y":1,"name":"box_left"},
+    {"x":0,"y":2,"name":"box_left"},
+    {"x":7,"y":1,"name":"box_right"},
+    {"x":7,"y":2,"name":"box_right"}
+  ]
+}
