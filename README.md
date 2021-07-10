@@ -1,2 +1,2 @@
 # Katamari
-Implementation of Katamari game in Java
+Implementation of the Katamari game in Java (University group project)
